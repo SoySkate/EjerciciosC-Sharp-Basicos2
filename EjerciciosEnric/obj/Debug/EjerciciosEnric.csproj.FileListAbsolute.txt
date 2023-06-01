@@ -1,0 +1,7 @@
+C:\Users\formacio3\source\repos\EjerciciosEnric\EjerciciosEnric\bin\Debug\EjerciciosEnric.exe.config
+C:\Users\formacio3\source\repos\EjerciciosEnric\EjerciciosEnric\bin\Debug\EjerciciosEnric.exe
+C:\Users\formacio3\source\repos\EjerciciosEnric\EjerciciosEnric\bin\Debug\EjerciciosEnric.pdb
+C:\Users\formacio3\source\repos\EjerciciosEnric\EjerciciosEnric\obj\Debug\EjerciciosEnric.csproj.AssemblyReference.cache
+C:\Users\formacio3\source\repos\EjerciciosEnric\EjerciciosEnric\obj\Debug\EjerciciosEnric.csproj.CoreCompileInputs.cache
+C:\Users\formacio3\source\repos\EjerciciosEnric\EjerciciosEnric\obj\Debug\EjerciciosEnric.exe
+C:\Users\formacio3\source\repos\EjerciciosEnric\EjerciciosEnric\obj\Debug\EjerciciosEnric.pdb
