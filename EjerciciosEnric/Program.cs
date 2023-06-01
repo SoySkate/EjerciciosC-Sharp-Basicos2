@@ -13,20 +13,23 @@ namespace EjerciciosEnric
     {
         static void comptador()
         {
-            Console.WriteLine("____________AA__(bucle for)_________________");
+            //Console.WriteLine("____________AA__(bucle for)_________________");
             for (int aa = 0; aa<= 5; aa++)
             {
-                System.Threading.Thread.Sleep(100);
-                Console.WriteLine(aa);
-            }
-            Console.WriteLine("______________BB___(bucle do while)_______________");
 
-            int bb = 0;
-            do
-            {
-                System.Threading.Thread.Sleep(100);
-                Console.WriteLine(bb++);
-            } while (bb <= 59);
+                int bb = 0;
+                do
+                {
+                    Console.WriteLine("Comptador:\n");
+                    Console.WriteLine(aa +":"+ (bb++));
+                    System.Threading.Thread.Sleep(100);
+                    Console.Clear();
+
+                } while (bb <= 59);
+            }
+            //Console.WriteLine("______________BB___(bucle do while)_______________");
+
+            
         }
         static void petit_Gran(string nums)
         {
@@ -81,28 +84,40 @@ namespace EjerciciosEnric
                 Console.WriteLine("\nDebe introducir un num decimal del 0,01 al 9,99.");
 
    }
-        static void esbrinarNum(int num)
+        static void esbrinarNum()
         {
+            int num;
+            
+
             Random aleatorio = new Random();
             int count = 0;
             int generatednum;
+            generatednum = aleatorio.Next(1, 100) + 1;
             for (int i = 1; i<=100; i++)
             {
-                generatednum = aleatorio.Next(1, 100) + 1;
+                Console.WriteLine("\nIntroduce el número que crees que es:");
+                try { num = int.Parse(Console.ReadLine()); } catch { Console.WriteLine("Debe escribir un numero!\n"); num = int.Parse(Console.ReadLine()); }
+                
+                if (num> generatednum)
+                {
+                    count++;
+                    Console.WriteLine("El número que buscas es más pequeño.");
+                }else if (num < generatednum)
+                {
+                    count++;
+                    Console.WriteLine("El número que buscas es más grande.");
+                }
                 if (generatednum == num)
                 {
+                    count++;
+                    Console.WriteLine("Lo has adivinado!");
                     break;
                 }
-                count++;
+                
             }
             Console.WriteLine("Se han realizado " + count + " intentos");
         }
-        //public class file
-        //{
-        //    public int index { get; set; }
-        //    public string city { get; set; }
-        //    public int numpoblacio { get; set; }
-        //}
+     
         static void readfile(StreamReader ruta)
         {
             string line;
@@ -270,10 +285,8 @@ namespace EjerciciosEnric
                         Console.ReadKey();
                         break;
                     case 4:
-                        Console.WriteLine("Introduce un numero que debamos esbrinar:\n");
-                        int numero;
-                        numero = int.Parse(Console.ReadLine());
-                        esbrinarNum(numero);
+                        Console.WriteLine("Adivina el numero entre 1 y el 100:\n");
+                        esbrinarNum();
                         Console.ReadKey();
                         break;
                     case 5:
